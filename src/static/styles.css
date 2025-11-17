@@ -74,22 +74,47 @@ section h3 {
   margin-bottom: 8px;
 }
 
-/* Participants list styling */
+/* Participants list styling (chip style, hide bullets) */
 .participants-list {
   margin-top: 8px;
-  padding-left: 20px; /* keep bullet indentation */
-  color: #444;
+  padding-left: 0;
+  list-style: none; /* hide bullets */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .participants-list li {
-  margin-bottom: 6px;
-  font-size: 14px;
-  line-height: 1.3;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #eef3ff;
+  color: #223;
+  padding: 6px 10px;
+  border-radius: 16px;
+  font-size: 13px;
+  border: 1px solid #d6e0ff;
 }
 
 .participants-list .no-participants {
-  font-style: italic;
+  background: transparent;
   color: #888;
+  padding: 0;
+  border: none;
+}
+
+.participant-remove {
+  background: transparent;
+  border: none;
+  color: #b00020;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.participant-remove:hover {
+  color: #7f0000;
 }
 
 .activity-card p strong {
